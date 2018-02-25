@@ -16,6 +16,7 @@ section.telegram-bot {
       text-transform: uppercase;
       background: none;
       border: 1px solid white;
+      @include btn-hover-effect;
     }
     @media (max-width: $bootstrap-el) {
       display: flex;

@@ -1,30 +1,67 @@
 section.school
 {
   margin-top: 70px;
-  .slick-dots {
-    bottom: -40px;
-    li {
-      margin: 0;
-      button {
+
+  .common-title {
+    margin-bottom: 45px;
+  }
+
+  .slider-one-level {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background: url("../img/motopitstop/graffity.png") no-repeat;
+      width: 331px;
+      height: 199px;
+    }
+    .slick-dots {
+      bottom: -40px;
+
+      li {
+        margin: 0;
+
+        button {
+          width: 15px;
+          height: 15px;
+          background: #d0d0d0;
+          border-radius: 0;
+
+          &:before {
+            content: '';
+          }
+
+        }
+
+      }
+
+      li.slick-active button:before {
+        background: #ffed00;
+        border-radius: 0;
         width: 15px;
         height: 15px;
-        background: #d0d0d0;
-        border-radius: 0;
-        &:before {
-          content: '';
-        }
+        content: '';
       }
-    }
-    li.slick-active button:before {
-      background: #ffed00;
-      border-radius: 0;
-      width: 15px;
-      height: 15px;
-      content: '';
+
     }
   }
 
   img {
     width: 100%;
+  }
+
+  .btn {
+    background: #ffed00;
+    padding: 6px 50px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    margin-top: 20px;
+    font-weight: 700;
+    @include btn-hover-effect;
+
+    @media (max-width: $bootstrap-sm) {
+      display: block;
+      margin-top: 40px;
+    }
   }
 }
