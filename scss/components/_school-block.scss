@@ -1,0 +1,30 @@
+section.school
+{
+  margin-top: 70px;
+  .slick-dots {
+    bottom: -40px;
+    li {
+      margin: 0;
+      button {
+        width: 15px;
+        height: 15px;
+        background: #d0d0d0;
+        border-radius: 0;
+        &:before {
+          content: '';
+        }
+      }
+    }
+    li.slick-active button:before {
+      background: #ffed00;
+      border-radius: 0;
+      width: 15px;
+      height: 15px;
+      content: '';
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+section.contacts {
+  background: #131313;
+
+  #map {
+    width: 100%;
+    height: 400px;
+    @media (max-width: $bootstrap-md) {
+      height: 300px;
+    }
+  }
+
+  .wrapper-contact {
+    padding: 49px 45px;
+    @media (max-width: $bootstrap-md) {
+      padding: 20px;
+    }
+    .common-title {
+      color: #ffed00;
+    }
+    ul {
+      color: #fff;
+      list-style: none;
+      padding-left: 0;
+      font-size: 18px;
+      @media (max-width: $bootstrap-md) {
+        text-align: center;
+        font-size: 17px;
+      }
+      li {
+        padding-bottom: 10px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
