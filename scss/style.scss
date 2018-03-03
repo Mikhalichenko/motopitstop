@@ -208,11 +208,16 @@ b i:last-child {
 .box-headline {
   font-size: 130px;
   line-height: 1.0;
+  @media (max-width: 520px) {
+    font-size: 50px !important;
+  }
 }
 
 .box-words-wrapper {
   display: inline-block;
   position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .box-words-wrapper b {
@@ -221,6 +226,8 @@ b i:last-child {
   white-space: nowrap;
   left: 0;
   top: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .box-words-wrapper b.is-visible {

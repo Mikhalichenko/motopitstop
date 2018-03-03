@@ -42,25 +42,6 @@ jQuery(document).ready(function($){
 		var duration = animationDelay;
 		$headlines.each(function(){
 			var headline = $(this);
-			
-			if(headline.hasClass('loading-bar')) {
-				duration = barAnimationDelay;
-				setTimeout(function(){ headline.find('.box-words-wrapper').addClass('is-loading') }, barWaiting);
-			} else if (headline.hasClass('clip')){
-				var spanWrapper = headline.find('.box-words-wrapper'),
-					newWidth = spanWrapper.width() + 10
-				spanWrapper.css('width', newWidth);
-			} else if (!headline.hasClass('type') ) {
-				//assign to .box-words-wrapper the width of its longest word
-				var words = headline.find('.box-words-wrapper b'),
-					width = 0;
-				words.each(function(){
-					var wordWidth = $(this).width();
-				    if (wordWidth > width) width = wordWidth;
-				});
-				headline.find('.box-words-wrapper').css('width', width);
-			};
-
 			//trigger animation
 			setTimeout(function(){ hideWord( headline.find('.is-visible').eq(0) ) }, duration);
 		});

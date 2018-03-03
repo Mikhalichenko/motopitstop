@@ -673,17 +673,24 @@ b i:last-child {
 .box-headline {
   font-size: 130px;
   line-height: 1.0; }
+  @media (max-width: 520px) {
+    .box-headline {
+      font-size: 50px !important; } }
 
 .box-words-wrapper {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  width: 100%;
+  text-align: center; }
 
 .box-words-wrapper b {
   display: inline-block;
   position: absolute;
   white-space: nowrap;
   left: 0;
-  top: 0; }
+  top: 0;
+  width: 100%;
+  text-align: center; }
 
 .box-words-wrapper b.is-visible {
   position: relative; }
